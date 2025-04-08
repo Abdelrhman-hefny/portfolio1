@@ -1,0 +1,71 @@
+// General Styles
+$primary-color: #1e3a8a; // Blue color
+$bg-color: #f8fafc; // Light gray background
+$white: #ffffff;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$hover-shadow: rgba(0, 0, 0, 0.2);
+
+.services-title {
+  @apply text-5xl font-bold text-center text-blue-500 py-8;
+}
+
+.services-subtitle {
+  @apply text-3xl font-semibold text-blue-500 text-center mt-16;
+}
+
+.services-container {
+  @apply px-4 md:px-0;
+}
+
+.services-list {
+  @apply mt-8 flex flex-wrap justify-between gap-8;
+}
+
+.service-card {
+  @apply p-6 bg-white rounded-lg shadow-md flex flex-col items-center text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl;
+  width: 100%;
+  max-width: 320px; // Set a maximum width for each card
+
+  &:hover {
+    box-shadow: 0 8px 16px $hover-shadow;
+  }
+
+  .service-icon {
+    @apply w-16 h-16 mb-4;
+  }
+
+  .service-heading {
+    @apply text-xl font-bold text-gray-900 mt-4;
+  }
+
+  .service-description {
+    @apply text-lg text-justify text-gray-600 mt-2;
+  }
+}
+
+// Media Queries for responsiveness
+@media (max-width: 1024px) {
+  .services-list {
+    @apply justify-center; // Center the cards on medium screens
+  }
+
+  .service-card {
+    @apply p-4; // Adjust padding on medium screens
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    @apply max-w-full; // Make cards full width on small screens
+  }
+}
+
+@media (max-width: 480px) {
+  .service-heading {
+    @apply text-base; // Reduce font size for very small screens
+  }
+
+  .service-description {
+    @apply text-sm; // Adjust description font size
+  }
+}

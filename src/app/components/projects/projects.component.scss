@@ -1,0 +1,24 @@
+/* إضافة هامش بين البطاقات */
+.card {
+    margin-bottom: 20px;
+    a {
+        text-decoration: none;
+        color: #242424;
+        
+    }
+
+}
+
+/* تخصيص العنوان داخل البطاقة */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* تخصيص نص البطاقة */
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+    text-align: center;
+}
